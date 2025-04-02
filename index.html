@@ -221,7 +221,7 @@
 
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -233,6 +233,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: var(--transition);
             border: 1px solid rgba(0,0,0,0.05);
+            height: fit-content;
         }
 
         .skill-category:hover {
@@ -514,6 +515,12 @@
             opacity: 0.8;
         }
 
+        @media (max-width: 1024px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -617,114 +624,218 @@
                         </div>
                     </div>
 
-                    <h3 class="section-title" style="margin-top: 4rem;">Technical Expertise</h3>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code"></i> Programming</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item" title="Java">
-                                    <i class="devicon-java-plain colored"></i>
-                                    <span>Java</span>
-                                </div>
-                                <div class="skill-item" title="Python">
-                                    <i class="devicon-python-plain colored"></i>
-                                    <span>Python</span>
-                                </div>
-                                <div class="skill-item" title="JavaScript">
-                                    <i class="devicon-javascript-plain colored"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="skill-item" title="TypeScript">
-                                    <i class="devicon-typescript-plain colored"></i>
-                                    <span>TypeScript</span>
-                                </div>
+                <h3 class="section-title" style="margin-top: 4rem;">Technical Expertise</h3>
+                <div class="skills-container">
+                    <!-- Left Column -->
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Java">
+                                <i class="devicon-java-plain colored"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item" title="Python">
+                                <i class="devicon-python-plain colored"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item" title="JavaScript">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item" title="TypeScript">
+                                <i class="devicon-typescript-plain colored"></i>
+                                <span>TypeScript</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item" title="AWS">
-                                    <i class="devicon-amazonwebservices-plain colored"></i>
-                                    <span>AWS</span>
-                                </div>
-                                <div class="skill-item" title="GCP">
-                                    <i class="devicon-googlecloud-plain colored"></i>
-                                    <span>GCP</span>
-                                </div>
-                                <div class="skill-item" title="Docker">
-                                    <i class="devicon-docker-plain colored"></i>
-                                    <span>Docker</span>
-                                </div>
-                                <div class="skill-item" title="Kubernetes">
-                                    <i class="devicon-kubernetes-plain colored"></i>
-                                    <span>K8s</span>
-                                </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-users-cog"></i> Agile Methodologies</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Jira">
+                                <i class="devicon-jira-plain colored"></i>
+                                <span>Jira</span>
+                            </div>
+                            <div class="skill-item" title="Confluence">
+                                <i class="devicon-confluence-plain colored"></i>
+                                <span>Confluence</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Databases</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item" title="PostgreSQL">
-                                    <i class="devicon-postgresql-plain colored"></i>
-                                    <span>PostgreSQL</span>
-                                </div>
-                                <div class="skill-item" title="MySQL">
-                                    <i class="devicon-mysql-plain colored"></i>
-                                    <span>MySQL</span>
-                                </div>
-                                <div class="skill-item" title="Oracle">
-                                    <i class="devicon-oracle-plain colored"></i>
-                                    <span>Oracle</span>
-                                </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cube"></i> Frameworks</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Spring Boot">
+                                <i class="devicon-spring-plain colored"></i>
+                                <span>Spring Boot 3</span>
+                            </div>
+                            <div class="skill-item" title="JUnit">
+                                <i class="fas fa-vial"></i>
+                                <span>JUnit 5</span>
+                            </div>
+                            <div class="skill-item" title="Mockito">
+                                <i class="fas fa-check-double"></i>
+                                <span>Mockito</span>
+                            </div>
+                            <div class="skill-item" title="Angular">
+                                <i class="devicon-angularjs-plain colored"></i>
+                                <span>Angular</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cogs"></i> Tools & Frameworks</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item" title="Spring Boot">
-                                    <i class="devicon-spring-plain colored"></i>
-                                    <span>Spring Boot</span>
-                                </div>
-                                <div class="skill-item" title="Angular">
-                                    <i class="devicon-angularjs-plain colored"></i>
-                                    <span>Angular</span>
-                                </div>
-                                <div class="skill-item" title="Git">
-                                    <i class="devicon-git-plain colored"></i>
-                                    <span>Git</span>
-                                </div>
-                                <div class="skill-item" title="Jira">
-                                    <i class="devicon-jira-plain colored"></i>
-                                    <span>Jira</span>
-                                </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-database"></i> Databases</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Oracle">
+                                <i class="devicon-oracle-plain colored"></i>
+                                <span>Oracle</span>
+                            </div>
+                            <div class="skill-item" title="MySQL">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item" title="PostgreSQL">
+                                <i class="devicon-postgresql-plain colored"></i>
+                                <span>PostgreSQL</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-chart-line"></i> Finance</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item" title="Quant Analysis">
-                                    <i class="fas fa-calculator"></i>
-                                    <span>Quant Analysis</span>
-                                </div>
-                                <div class="skill-item" title="Risk Management">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Risk Mgmt</span>
-                                </div>
-                                <div class="skill-item" title="Machine Learning">
-                                    <i class="fas fa-brain"></i>
-                                    <span>ML in Finance</span>
-                                </div>
+                    <!-- Right Column -->
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="AWS">
+                                <i class="devicon-amazonwebservices-plain colored"></i>
+                                <span>AWS</span>
+                            </div>
+                            <div class="skill-item" title="GCP">
+                                <i class="devicon-googlecloud-plain colored"></i>
+                                <span>GCP</span>
+                            </div>
+                            <div class="skill-item" title="IBM Cloud">
+                                <i class="devicon-ibm-plain colored"></i>
+                                <span>IBM Cloud</span>
+                            </div>
+                            <div class="skill-item" title="Terraform">
+                                <i class="devicon-terraform-plain colored"></i>
+                                <span>Terraform</span>
+                            </div>
+                            <div class="skill-item" title="Ansible">
+                                <i class="devicon-ansible-plain colored"></i>
+                                <span>Ansible</span>
+                            </div>
+                            <div class="skill-item" title="Docker">
+                                <i class="devicon-docker-plain colored"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item" title="Kubernetes">
+                                <i class="devicon-kubernetes-plain colored"></i>
+                                <span>Kubernetes</span>
+                            </div>
+                            <div class="skill-item" title="OpenShift">
+                                <i class="devicon-redhat-plain colored"></i>
+                                <span>OpenShift</span>
+                            </div>
+                            <div class="skill-item" title="Grafana">
+                                <i class="devicon-grafana-plain colored"></i>
+                                <span>Grafana</span>
+                            </div>
+                            <div class="skill-item" title="Prometheus">
+                                <i class="devicon-prometheus-plain colored"></i>
+                                <span>Prometheus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tasks"></i> CI/CD</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Jenkins">
+                                <i class="devicon-jenkins-plain colored"></i>
+                                <span>Jenkins</span>
+                            </div>
+                            <div class="skill-item" title="GitHub Actions">
+                                <i class="devicon-githubactions-plain colored"></i>
+                                <span>GitHub Actions</span>
+                            </div>
+                            <div class="skill-item" title="Spinnaker">
+                                <i class="fas fa-ship"></i>
+                                <span>Spinnaker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-terminal"></i> Scripting</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Bash">
+                                <i class="devicon-bash-plain colored"></i>
+                                <span>Bash</span>
+                            </div>
+                            <div class="skill-item" title="Shell">
+                                <i class="fas fa-terminal"></i>
+                                <span>Shell Scripting</span>
+                            </div>
+                            <div class="skill-item" title="Automation">
+                                <i class="fas fa-robot"></i>
+                                <span>Automation Tools</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-check-circle"></i> Testing</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Unit Testing">
+                                <i class="fas fa-vial"></i>
+                                <span>Unit Testing</span>
+                            </div>
+                            <div class="skill-item" title="Integration Testing">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Integration Testing</span>
+                            </div>
+                            <div class="skill-item" title="TDD">
+                                <i class="fas fa-code-branch"></i>
+                                <span>TDD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-plug"></i> API Testing</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Postman">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code-branch"></i> Version Control</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" title="Git">
+                                <i class="devicon-git-plain colored"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item" title="GitHub">
+                                <i class="devicon-github-plain colored"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item" title="Gerrit">
+                                <i class="devicon-gerrit-plain colored"></i>
+                                <span>Gerrit</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="portfolio" class="section">
         <div class="container">
