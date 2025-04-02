@@ -569,6 +569,74 @@
             opacity: 0.8;
         }
 
+        .footer-column {
+            margin-bottom: 2rem;
+        }
+
+        .footer-heading {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+        }
+        
+        .footer-link i {
+            color: var(--primary);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .footer-link .link-hover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .footer-link:hover i {
+            color: white;
+        }
+        
+        .footer-link:hover .link-hover {
+            width: 100%;
+        }
+
         @media (max-width: 1024px) {
             .skills-container {
                 grid-template-columns: 1fr;
@@ -1171,9 +1239,10 @@
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div>
+            <!-- Left Column -->
+            <div class="footer-column">
                 <div class="footer-logo">Abrar Ahmed</div>
-                <p class="footer-description">Software Developer with expertise in cloud computing, DevOps, and software development.</p>
+                <p class="footer-description">Software Developer with expertise in cloud computing, DevOps, and financial engineering.</p>
                 <div class="social-links">
                     <a href="https://twitter.com/abrar2o3o" class="social-link" target="_blank" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
@@ -1195,17 +1264,41 @@
                     </a>
                 </div>
             </div>
-            <div>
-                <h3>Quick Links</h3>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Navigation</h3>
                 <div class="footer-links">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#portfolio" class="footer-link">Portfolio</a>
-                    <a href="#certifications" class="footer-link">Certifications</a>
-                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="#home" class="footer-link">
+                        <i class="fas fa-chevron-right"></i>
+                        Home
+                        <span class="link-hover"></span>
+                    </a>
+                    <a href="#about" class="footer-link">
+                        <i class="fas fa-chevron-right"></i>
+                        About Me
+                        <span class="link-hover"></span>
+                    </a>
+                    <a href="#portfolio" class="footer-link">
+                        <i class="fas fa-chevron-right"></i>
+                        Portfolio
+                        <span class="link-hover"></span>
+                    </a>
+                    <a href="#certifications" class="footer-link">
+                        <i class="fas fa-chevron-right"></i>
+                        Certifications
+                        <span class="link-hover"></span>
+                    </a>
+                    <a href="#contact" class="footer-link">
+                        <i class="fas fa-chevron-right"></i>
+                        Contact
+                        <span class="link-hover"></span>
+                    </a>
                 </div>
             </div>
         </div>
+
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>© 2025 Abrar Ahmed. All rights reserved.</p>
         </div>
