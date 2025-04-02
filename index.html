@@ -382,6 +382,60 @@
             color: var(--primary);
         }
 
+              /* New Recommendations Section Styles */
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .recommendation-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .recommendation-badge {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .recommendation-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .recommendation-position {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation-text {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -954,6 +1008,64 @@
                         <i class="fas fa-external-link-alt"></i>
                         View Credential
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- New Recommendations Section -->
+    <section id="recommendations" class="section">
+        <div class="container">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <div class="recommendation-badge">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Arbab Ali</h3>
+                    <p class="recommendation-position">Microservices Developer | Java Spring Boot Developer | 5G Intelligent Automation Platform</p>
+                    <p class="date">March 7, 2024</p>
+                    <p class="recommendation-text">I had the pleasure of working and mentoring Abrar during his Student Developer internship at Ericsson Hungary. His dedication, curiosity, and work ethic were truly impressive. Abrar consistently paid attention to deadlines, asked insightful questions about technology and process, and balanced his internship with university coursework exceptionally well. His attention to detail and willingness to tackle challenges stood out. I believe Abrar has the potential to excel in both software development and management roles and I highly recommend him.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-badge">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Zoltán Szabó</h3>
+                    <p class="recommendation-position">DevOps | Microservices Developer | Java Spring Boot Developer</p>
+                    <p class="date">February 28, 2024</p>
+                    <p class="recommendation-text">I had the opportunity to work with Abrar at Ericsson and I highly recommend him as a colleague. He consistently demonstrated a remarkable ability to quickly grasp new concepts, coupled with a strong motivation and diligent work ethic. With his dedication and enthusiasm he contributed to the team's daily tasks. It is a pleasure working alongside him.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-badge">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Begüm Özyılmaz Korkmaz</h3>
+                    <p class="recommendation-position">Product Owner at Telefonica Germany</p>
+                    <p class="date">February 27, 2024</p>
+                    <p class="recommendation-text">I had the pleasure of working closely with Abrar Ahmed during his time at Ericsson as a Student Software Developer. Abrar showed great initiative in tackling complex problems and consistently delivered high-quality solutions within tight deadlines. His positive attitude and willingness to take on new challenges made him a valuable member of our team. His professionalism, teamwork, and communication skills were exemplary. I highly recommend Abrar to any organization seeking a talented and motivated software developer.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-badge">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Danish Adeel</h3>
+                    <p class="recommendation-position">Technologist | Agile Project Manager | Scrum Master</p>
+                    <p class="date">February 27, 2024</p>
+                    <p class="recommendation-text">Abrar is a student developer on my team. Despite being a junior member, his proactive engagement, eagerness to learn, and commitment to delivering quality work have made a valuable impact on our team, reflecting his promising potential in the agile development environment. He has the potential to be a valuable member of any agile team.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-badge">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Tamás Márk Simon</h3>
+                    <p class="recommendation-position">Senior Developer & Software Architect at Ericsson</p>
+                    <p class="date">February 23, 2024</p>
+                    <p class="recommendation-text">I had the opportunity to work together with Abrar at Ericsson, and I'm pleased to recommend him. Abrar completed the onboarding process quickly and he started taking on challenging tasks very early on. I'm also glad to say that everyone could rely on him as a teammate, he is always available for technical discussions and is up to date on the latest features the team is working on. He'd make an excellent addition to any team.</p>
                 </div>
             </div>
         </div>
