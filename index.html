@@ -637,6 +637,182 @@
             width: 100%;
         }
 
+                /* Footer Styles */
+        footer {
+            background: linear-gradient(160deg, #111827 0%, #1a2335 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            padding: 4rem 0;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-description {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon-wrapper {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icon-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, 
+                transparent, 
+                rgba(255,255,255,0.2), 
+                transparent);
+            transition: 0.5s;
+        }
+        
+        .social-icon-wrapper:hover::before {
+            left: 100%;
+        }
+        
+        .social-icon-wrapper i {
+            font-size: 1.2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover .social-icon-wrapper {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        /* Quick Links */
+        .footer-heading {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .footer-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .footer-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-icon {
+            margin-right: 1rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .link-text {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+        }
+        
+        .footer-link:hover {
+            background: rgba(37, 99, 235, 0.1);
+            transform: translateX(10px);
+        }
+        
+        .footer-link:hover .link-icon {
+            transform: translateX(5px);
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            padding: 2rem 0 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 2rem 0;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        .pulse {
+            animation: pulse 1.5s infinite;
+            color: #ef4444;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .footer-link {
+                padding: 0.5rem;
+            }
+        }
+
         @media (max-width: 1024px) {
             .skills-container {
                 grid-template-columns: 1fr;
@@ -1261,56 +1437,68 @@
             <!-- Left Column -->
             <div class="footer-column">
                 <div class="footer-logo">Abrar Ahmed</div>
-                <p class="footer-description">Software Developer with expertise in cloud computing, DevOps, and financial engineering.</p>
+                <p class="footer-description">Bridging quantitative finance with cutting-edge technology solutions</p>
                 <div class="social-links">
                     <a href="https://twitter.com/abrar2o3o" class="social-link" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-twitter"></i>
+                        </div>
                     </a>
                     <a href="https://linkedin.com/in/abrar2030" class="social-link" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
                     </a>
                     <a href="https://fb.com/abrar2o3o" class="social-link" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
                     </a>
                     <a href="https://instagram.com/abrar2o3o" class="social-link" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-instagram"></i>
+                        </div>
                     </a>
                     <a href="https://www.hackerrank.com/abrar2030" class="social-link" target="_blank" aria-label="HackerRank">
-                        <i class="fab fa-hackerrank"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-hackerrank"></i>
+                        </div>
                     </a>
                     <a href="https://github.com/abrar2030" class="social-link" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-github"></i>
+                        </div>
                     </a>
                 </div>
             </div>
 
             <!-- Quick Links Column -->
             <div class="footer-column">
-                <h3 class="footer-heading">Quick Navigation</h3>
+                <h3 class="footer-heading">Explore</h3>
                 <div class="footer-links">
                     <a href="#home" class="footer-link">
-                        <i class="fas fa-chevron-right"></i>
-                        Home
+                        <span class="link-icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="link-text">Home</span>
                         <span class="link-hover"></span>
                     </a>
                     <a href="#about" class="footer-link">
-                        <i class="fas fa-chevron-right"></i>
-                        About Me
+                        <span class="link-icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="link-text">About</span>
                         <span class="link-hover"></span>
                     </a>
                     <a href="#portfolio" class="footer-link">
-                        <i class="fas fa-chevron-right"></i>
-                        Portfolio
+                        <span class="link-icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="link-text">Projects</span>
                         <span class="link-hover"></span>
                     </a>
                     <a href="#certifications" class="footer-link">
-                        <i class="fas fa-chevron-right"></i>
-                        Certifications
+                        <span class="link-icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="link-text">Certifications</span>
                         <span class="link-hover"></span>
                     </a>
                     <a href="#contact" class="footer-link">
-                        <i class="fas fa-chevron-right"></i>
-                        Contact
+                        <span class="link-icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="link-text">Connect</span>
                         <span class="link-hover"></span>
                     </a>
                 </div>
@@ -1319,7 +1507,8 @@
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>© 2025 Abrar Ahmed. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <p>© 2025 Abrar Ahmed. Crafted with <i class="fas fa-heart pulse"></i> in Budapest</p>
         </div>
     </div>
 </footer>
