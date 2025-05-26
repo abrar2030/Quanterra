@@ -1196,7 +1196,7 @@
     <section id="portfolio" class="section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="portfolio-grid">
+            <div class="portfolio-grid" id="portfolio-grid">
                 <!-- Original Projects -->
                 <div class="portfolio-card">
                     <div class="portfolio-img">
@@ -1332,7 +1332,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/quantumvest.jpg" alt="QuantumVest">
                     </div>
@@ -1353,7 +1353,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/riskoptimizer.jpg" alt="RiskOptimizer">
                     </div>
@@ -1373,7 +1373,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/fluxion.jpg" alt="Fluxion">
                     </div>
@@ -1394,7 +1394,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/chainfinity.jpg" alt="ChainFinity">
                     </div>
@@ -1415,7 +1415,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/optionix.jpg" alt="Optionix">
                     </div>
@@ -1436,7 +1436,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/alphamind.jpg" alt="AlphaMind">
                     </div>
@@ -1455,7 +1455,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/nexora.jpg" alt="Nexora">
                     </div>
@@ -1476,7 +1476,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/fluxora.jpg" alt="Fluxora">
                     </div>
@@ -1497,7 +1497,7 @@
                     </div>
                 </div>
     
-                <div class="portfolio-card">
+                <div class="portfolio-card hidden-project">
                     <div class="portfolio-img">
                         <img src="assets/quantis.jpg" alt="Quantis">
                     </div>
@@ -1518,8 +1518,41 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#" id="see-all-projects" class="button">
+                    <i class="fas fa-project-diagram"></i>
+                    See All Projects
+                </a>
+            </div>
         </div>
     </section>
+    
+    <style>
+        .hidden-project {
+            display: none;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seeAllButton = document.getElementById('see-all-projects');
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            
+            seeAllButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                hiddenProjects.forEach(function(project) {
+                    project.classList.remove('hidden-project');
+                });
+                
+                seeAllButton.style.display = 'none';
+            });
+        });
+    </script>
 
     <section id="certifications" class="section">
         <div class="container">
